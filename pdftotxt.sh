@@ -7,6 +7,9 @@ set -e
 # Copy this file to folder with all PDF files to be converted in subfolder /pdfs
 DIR="pdfs"
 
+timestamp=$(date "+%Y%m%d-%H%M%S")
+echo $timestamp
+
 # Uses PDFtoPNG command of XpdfReader to convert each page in each PDF to a PNG file
 FILES=${DIR}/*.pdf
 for f in $FILES
@@ -26,7 +29,8 @@ do
   echo "============== END OF PAGE" >> "${txtfile}.txt"
 done
 
-# Create output directory in /pdfs, moves all .txt files to output directory, deletes .png files
-mkdir ${DIR}/output
-mv ${DIR}/*.txt ${DIR}/output
+# Create output directory in /pdfs, move all .txt files to output directory, delete .png files
+mkdir ${DIR}/output_$timestamp
+mv ${DIR}/*.txt ${DIR}/output_$timestamp
 rm ${DIR}/*.png
+echo "PDFtoTXT done."
