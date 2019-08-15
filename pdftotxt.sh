@@ -18,7 +18,7 @@ mkdir -p renamedPDFs #make new directory pdfs/renamedPDFs, unless it already exi
 FILES=*.pdf
 for f in $FILES
 do
- newfilename=`echo ${f} | cut -d'.' -f1` #remove file extension from original filename
+ newfilename=`echo ${f%????}` #remove file extension (last 4 chracters) from original filename
  newfilename=`echo ${newfilename//[-.(),]/}` #remove dots, commas, parentheses, dashes from filename
  newfilename=`echo ${newfilename// /_}` #replace spaces with underscores
  cp "${f}" "renamedPDFs/${newfilename}.pdf"
