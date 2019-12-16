@@ -8,8 +8,10 @@ Bash script for extracting machine-readable text from PDFs using XpdfReader and 
 3. PDF file(s) should be in 'pdfs' directory in project directory (e.g.: home/pdfs, with pdftotxt.sh in home).
 4. Run shell script (e.g. open Terminal, *cd* to project directory, and enter command *sh pdftotxt.sh* or *sh pdftotxt.sh -eachpage*
 
+![For setup, working directory should have pdftotxt.sh and a /pdfs folder in the home directory](/images/OriginalFolder)
+
 ## Script workflow
 
 For the PDF file(s) in the /pdfs directory, special characters (including dashes) will be removed and spaces will be replaced by underscores, then the file is copied to a new /pdfs/renamedPDFs directory. Using the resulting PDF files in pdfs/renamedPDFs, XpdfReader converts each page to a PNG image using the PDF filenames as root filenames. Tesseract then converts each PNG image to text. Based on the root filenames, the text files are appended in sequence resulting in one .txt file per original PDF file (e.g.: first_pdf_document.txt, second_pdf_document.txt). An output directory with date and time stamps is created in the /pdfs/renamedPDFs directory; all .txt files are moved there and all PNG files are deleted.
 
-If the -eachpage option is used, the only difference is that there is no appending of text files and each page from the original PDF becomes an individual text file (1 PDF page = 1 text file, e.g.: first_pdf_document-000001.txt, first_pdf_document-000002.txt, etc.).
+If the **-eachpage** option is used, the only difference is that there is no appending of text files and each page from the original PDF becomes an individual text file (1 PDF page = 1 text file, e.g.: first_pdf_document-000001.txt, first_pdf_document-000002.txt, etc.).
