@@ -8,7 +8,7 @@ Bash script for extracting machine-readable text from PDFs using XpdfReader and 
 3. PDF file(s) should be in 'pdfs' directory in project directory (e.g.: home/pdfs, with pdftotxt.sh in home).
 4. Run shell script (e.g. open Terminal, *cd* to project directory, and enter command *sh pdftotxt.sh* or *sh pdftotxt.sh -eachpage*
 
-![For setup, working directory should have pdftotxt.sh and a /pdfs folder in the home directory](/images/OriginalFolder.png)
+![Project directory with pdftotxt.sh file and two PDF files in a /pdfs folder](/images/OriginalFolder.png | width=300)
 
 ## Script workflow
 
