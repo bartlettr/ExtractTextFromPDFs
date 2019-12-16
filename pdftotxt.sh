@@ -21,7 +21,7 @@ set -e
 # Rename PDF files to eliminate special characters and spaces
 cd pdfs
 pdffolder="renamedPDFs"
-mkdir -p pdffolder #make new directory pdfs/renamedPDFs, unless it already exists
+mkdir -p $pdffolder #make new directory pdfs/renamedPDFs, unless it already exists
 
 FILES=*.pdf
 for f in $FILES
