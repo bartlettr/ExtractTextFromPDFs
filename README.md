@@ -3,7 +3,7 @@ Bash script for extracting machine-readable text from PDFs using XpdfReader and 
 
 ## Setup
 
-1. Install <a href="https://www.xpdfreader.com/">XpdfReader</a> and Tesseract (developed using XpdfReader 4.0.0 and Tesseract 4.00 in macOS 10.14.3)
+1. Install <a href="https://www.xpdfreader.com/">XpdfReader</a> and <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a> (developed using XpdfReader 4.0.0 and Tesseract 4.00 installed in macOS 10.14.3 using <a href="https://brew.sh/">Homebrew</a>)
 2. Copy shell script (pdftotxt.sh) to project directory
 3. PDF file(s) should be in 'pdfs' directory in project directory (e.g.: home/pdfs, with pdftotxt.sh in home).
 4. Run shell script (e.g. open Terminal, *cd* to project directory, and enter command *sh pdftotxt.sh* or *sh pdftotxt.sh -eachpage*
