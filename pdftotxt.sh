@@ -1,7 +1,7 @@
 #!/bin/bash
 # Bash shell script to remove special characters from PDF filenames and replace spaces with underscores
 # Then convert each page of the renamed PDF file to a .txt file using XpdfReader and Tesseract
-# Script developed using XpdfReader 4.0.0 and Tesseract 4.00 in Mac OS 10.14.3
+# Script developed using XpdfReader 4.0.0 and Tesseract 4.00 in macOS 10.14.3
 
 # TIME: in total, process will take 15-20 seconds per page
 
@@ -13,7 +13,7 @@
 
 # RESULT
 # Home directory will have new directories /home/pdfs/renamedPDFs and /home/pdfs/renamedPDFs/output_[timestamp]
-# /home/pdfs/renamedPDFs includes PDF files renamed to elimiate special characters
+# /home/pdfs/renamedPDFs includes PDF files renamed to eliminate special characters
 # /home/pdfs/renamedPDFs/output_[timestamp] includes output .txt file(s)
 
 set -e
